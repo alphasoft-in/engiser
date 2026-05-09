@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation';
+import PageHeader from '../../components/PageHeader';
+import Footer from '../../components/Footer';
+
+const transportItems = [
+  { name: 'CARGA PESADA', img: '/images/serv_carga.png', desc: 'Camiones de alto tonelaje para transporte industrial.' },
+  { name: 'CAMIONETAS', img: '/images/serv_camionetas.png', desc: 'Unidades 4x4 equipadas para minería y supervisión.' },
+  { name: 'MONTACARGAS', img: '/images/serv_montacargas.png', desc: 'Equipos de izaje para movimiento de materiales.' },
+  { name: 'OTROS EN GENERAL', img: '/images/cat_otros.png', desc: 'Servicios de transporte y logística complementaria.' },
+];
+---
+
+<Layout title="Alquiler de Transporte - ENGISER">
+	<Navigation client:load />
+	
+	<main class="bg-white min-h-screen">
+    <PageHeader title="Alquiler Transporte" currentPage="Alquiler" client:load />
+
+		<section class="py-24 overflow-hidden">
+			<div class="max-w-7xl mx-auto px-6 md:px-12">
+				{/* Header Section */}
+				<div class="max-w-4xl mx-auto mb-20 text-center flex flex-col items-center">
+					<div class="flex items-center gap-3 mb-6">
+						<div class="w-10 h-[2px] bg-orange-600"></div>
+						<h2 class="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Logística e Ingeniería</h2>
+						<div class="w-10 h-[2px] bg-orange-600"></div>
+					</div>
+
+					<h1 class="text-2xl md:text-4xl font-black font-outfit mb-6 leading-[1.1] text-slate-900 tracking-tight uppercase">
+						Alquiler de <br />
+						<span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">Transporte Industrial</span>
+					</h1>
+
+					<p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+						Nuestra empresa ofrece en alquiler vehículos especializados para el transporte de personas y equipos técnicos, garantizando seguridad y eficiencia en cada operación.
+					</p>
+				</div>
+
+				{/* Transport Grid - PREMIUM CIRCLE FORMAT */}
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative justify-items-center">
+					{transportItems.map((item) => (
+						<div class="flex flex-col items-center group w-full max-w-[280px]">
+							<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 overflow-hidden flex items-center justify-center">
+								<img 
+									src={item.img} 
+									alt={item.name} 
+									class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 mix-blend-multiply brightness-[1.02] contrast-[1.1]" 
+                  style={{ maskImage: 'radial-gradient(circle, black 50%, transparent 95%)', WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)' }}
+								/>
+							</div>
+							<div class="mt-8 text-slate-900 text-[11px] md:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
+								{item.name}
+                <div class="w-0 h-0.5 bg-orange-600 mx-auto mt-2 group-hover:w-12 transition-all duration-500"></div>
+							</div>
+						</div>
+					))}
+					{/* Decorative Background Element */}
+					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-600/5 rounded-full blur-[150px] -z-10" />
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

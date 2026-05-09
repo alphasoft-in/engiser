@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation';
+import PageHeader from '../../components/PageHeader';
+import Footer from '../../components/Footer';
+
+const serviceFeatures = [
+  { 
+    name: 'RECARGA NORMADA', 
+    image: '/images/extintores/recarga.png' 
+  },
+  { 
+    name: 'TIEMPO RÉCORD', 
+    image: '/images/extintores/tiempo.png' 
+  },
+  { 
+    name: 'EQUIPOS DE REPUESTO', 
+    image: '/images/extintores/repuestos.png' 
+  },
+  { 
+    name: 'PRUEBA HIDROSTÁTICA', 
+    image: '/images/extintores/prueba.png' 
+  },
+  { 
+    name: 'CERTIFICACIÓN OFICIAL', 
+    image: '/images/extintores/certificacion.png' 
+  },
+  { 
+    name: 'GARANTÍA TOTAL', 
+    image: '/images/extintores/garantia.png' 
+  },
+];
+
+const supplementaryServices = [
+  'Venta de Extintores (PQS, CO2, Agua, K)',
+  'Asesoramiento en Ubicación Estratégica',
+  'Señalética Normada de Seguridad',
+  'Capacitación en Uso de Extintores'
+];
+---
+
+<Layout title="Mantenimiento de Extintores - ENGISER">
+	<Navigation client:load />
+	
+	<main class="bg-white min-h-screen">
+    <PageHeader title="Mantenimiento Extintores" currentPage="Extintores" client:load />
+
+		<section class="py-24 overflow-hidden">
+			<div class="max-w-7xl mx-auto px-6 md:px-12">
+				{/* Header Section */}
+				<div class="max-w-4xl mx-auto text-center mb-20 flex flex-col items-center">
+					<div class="flex items-center gap-3 mb-6">
+						<div class="w-10 h-[2px] bg-orange-600"></div>
+						<h2 class="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Protección Contra Incendios</h2>
+						<div class="w-10 h-[2px] bg-orange-600"></div>
+					</div>
+
+					<h1 class="text-2xl md:text-4xl font-black font-outfit mb-8 leading-tight text-slate-900 tracking-tight uppercase">
+						Mantenimiento y <br />
+						<span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">Recarga de Extintores</span>
+					</h1>
+
+					<p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+						Garantizamos la operatividad de sus equipos bajo las más estrictas normas técnicas. Nuestro servicio rápido y certificado asegura que su empresa siempre esté protegida.
+					</p>
+				</div>
+
+				{/* Extintores Grid - PREMIUM CIRCLE FORMAT */}
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative justify-items-center mb-32">
+					{serviceFeatures.map((service) => (
+						<div class="flex flex-col items-center group w-full max-w-[280px]">
+							<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden">
+								<img 
+                  src={service.image} 
+                  alt={service.name}
+                  class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500"
+                />
+							</div>
+							<div class="mt-8 text-slate-900 text-[11px] md:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
+								{service.name}
+                <div class="w-0 h-0.5 bg-orange-600 mx-auto mt-2 group-hover:w-12 transition-all duration-500"></div>
+							</div>
+						</div>
+					))}
+					{/* Decorative Background Element */}
+					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-600/5 rounded-full blur-[150px] -z-10" />
+				</div>
+
+				{/* Specialized Services Section */}
+				<div class="bg-slate-950 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+          
+          <div class="relative z-10 flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex-1">
+              <h3 class="text-white text-2xl font-black uppercase tracking-widest mb-8 leading-tight">
+                Venta <br />
+                <span class="text-orange-600">& Asesoría</span>
+              </h3>
+              <p class="text-slate-400 font-medium mb-10 text-sm leading-relaxed max-w-md">
+                No solo recargamos, también suministramos equipos nuevos de la más alta calidad y le asesoramos en la ubicación estratégica según la normativa vigente.
+              </p>
+              <div class="flex items-center gap-4 text-white font-black text-[10px] uppercase tracking-widest">
+                <div class="w-12 h-1 bg-orange-600"></div>
+                Certificación Defensa Civil
+              </div>
+            </div>
+            
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+              {supplementaryServices.map((service) => (
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl group hover:border-orange-600 transition-all">
+                  <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-orange-600"></div>
+                    <span class="text-white font-black text-[10px] uppercase tracking-[0.2em] leading-snug">{service}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

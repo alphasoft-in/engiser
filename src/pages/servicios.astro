@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation';
+import PageHeader from '../components/PageHeader';
+import Services from '../components/sections/Services';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Servicios de Ingeniería | ENGI SER">
+	<Navigation client:load />
+	<main>
+		<PageHeader client:load title="Soluciones Técnicas" currentPage="Servicios" />
+		<Services client:load />
+	</main>
+	<Footer />
+</Layout>

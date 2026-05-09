@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "ENGISER - Consultoría, ingeniería contra incendios y venta de equipos de rescate de alta calidad." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Tags -->
+		<title>{title} | ENGISER</title>
+		<meta name="keywords" content="ingeniería contra incendios, rescate, consultoría, seguridad industrial, medio ambiente, equipos de rescate" />
+		<meta property="og:title" content={`${title} | ENGISER`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		
+		<style>
+			body {
+				font-family: 'Inter', sans-serif;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'Outfit', sans-serif;
+			}
+		</style>
+	</head>
+	<body class="bg-[#020205] text-white overflow-x-hidden">
+		<slot />
+	</body>
+</html>

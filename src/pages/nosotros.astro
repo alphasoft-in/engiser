@@ -1,0 +1,16 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation';
+import PageHeader from '../components/PageHeader';
+import About from '../components/sections/About';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Sobre Nosotros | ENGI SER">
+	<Navigation client:load />
+	<main>
+		<PageHeader client:load title="Nuestra Identidad" currentPage="Nosotros" />
+		<About client:load />
+	</main>
+	<Footer />
+</Layout>
