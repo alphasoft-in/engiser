@@ -28,9 +28,9 @@ const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Phone, title: 'Llámanos', value: '+51 987 654 321', sub: 'Atención Lun - Vie' },
-                { icon: Mail, title: 'Escríbenos', value: 'contacto@engiser.com', sub: 'Respuesta rápida' },
-                { icon: MapPin, title: 'Ubicación', value: 'Lima, Perú', sub: 'Servicio Nacional' },
+                { icon: Phone, title: 'Llámanos', value: '950 267 871 / 934 581 856', sub: 'Atención Especializada' },
+                { icon: Mail, title: 'Escríbenos', value: 'ventas@engiser.com.pe', sub: 'Cotizaciones rápidas' },
+                { icon: MapPin, title: 'Nuestras Sedes', value: 'Lima, Chimbote, Huacho, Trujillo, Chiclayo y Piura.', sub: 'Cobertura a nivel nacional' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl hover:shadow-slate-200 transition-all duration-500">
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-slate-100 group-hover:border-orange-200 transition-colors duration-500">

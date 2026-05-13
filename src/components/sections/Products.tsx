@@ -10,7 +10,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
   const allCategories = [
     { name: 'ACCESORIOS TÉCNICOS', img: '/images/cat_accesorios.png' },
     { name: 'BOMBAS PORTÁTILES', img: '/images/cat_bombas.png' },
-    { name: 'DETECTORES DE GAS Y TEMP.', img: '/images/cat_detectores.png' },
+    { name: 'SISTEMAS DE ALARMA CONTRA INCENDIOS', img: '/images/cat_detectores.png' },
     { name: 'EQUIPAMIENTO PARA RESCATE', img: '/images/cat_rescate.png' },
     { name: 'PROTECCIÓN RESPIRATORIA', img: '/images/cat_respiratoria.png' },
     { name: 'PROTECCIÓN PERSONAL', img: '/images/cat_personal.png' },

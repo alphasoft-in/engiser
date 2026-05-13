@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Shield, ChevronDown, MessageCircle } from 'lucide-react';
+import { Menu, X, Shield, ChevronDown } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,16 +26,11 @@ const Navigation = () => {
       name: 'Servicios', 
       href: '/servicios',
       dropdown: [
-        { name: 'Seguridad y Salud (Ley 29783)', href: '/servicios/seguridad-salud' },
         { name: 'Redes Contra Incendios', href: '/servicios/redes-incendios' },
-        { name: 'Seguridad en Construcción', href: '/servicios/seguridad-construccion' },
         { name: 'Mantenimiento de Extintores', href: '/servicios/mantenimiento-extintores' },
-        { name: 'Monitoreo Ocupacional', href: '/servicios/monitoreo-ocupacional' },
         { name: 'Detección de Incendios', href: '/servicios/deteccion-incendios' },
         { name: 'Seguridad Electrónica', href: '/servicios/seguridad-electronica' },
-        { name: 'Gestión Ambiental', href: '/servicios/gestion-ambiental' },
         { name: 'Servicios Generales', href: '/servicios/servicios-generales' },
-        { name: 'Alquiler de Transporte', href: '/servicios/alquiler-transporte' },
       ]
     },
     { name: 'Contacto', href: '/contacto' },
@@ -142,7 +138,7 @@ const Navigation = () => {
             className="btn-primary py-2.5 px-6 lg:px-8 text-[11px] uppercase tracking-widest font-bold flex items-center justify-center gap-2"
           >
             Cotizar Proyecto
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4" />
           </motion.a>
         </div>
 
@@ -191,13 +187,13 @@ const Navigation = () => {
                 </div>
               ))}
               <a 
-                href="https://wa.me/51900000000?text=Hola%20ENGISER,%20me%20gustaría%20solicitar%20una%20cotización%20para%20un%20proyecto."
+                href="https://wa.me/51950267871?text=Hola%20ENGISER,%20me%20gustaría%20solicitar%20una%20cotización%20para%20un%20proyecto."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full mt-2 flex items-center justify-center gap-2"
               >
                 Cotizar Ahora
-                <MessageCircle className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
             </div>
           </motion.div>

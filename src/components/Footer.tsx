@@ -1,4 +1,5 @@
 import { Shield, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const Footer = () => {
   return (
@@ -22,15 +23,20 @@ const Footer = () => {
           </div>
 
           <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black text-slate-200 mb-8 uppercase tracking-[0.3em]">Empresa</h4>
-            <ul className="space-y-4">
-              {['Inicio', 'Sobre Nosotros', 'Misión y Visión', 'Valores'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-slate-500 text-[13px] hover:text-white transition-colors font-black uppercase tracking-wider block">
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <h4 className="text-[10px] font-black text-slate-200 mb-8 uppercase tracking-[0.3em]">Contacto</h4>
+            <ul className="space-y-5">
+              <li className="text-slate-500 text-[11px] font-bold uppercase tracking-wider leading-relaxed">
+                <span className="text-slate-300 block mb-1">Sede Lima:</span>
+                Jr. Rebeca Oquendo 371 Of. 501, Breña
+              </li>
+              <li className="text-slate-500 text-[11px] font-bold uppercase tracking-wider leading-relaxed">
+                <span className="text-slate-300 block mb-1">Sede Chimbote:</span>
+                Urb. Villas de la pradera de Nvo. Chimbote
+              </li>
+              <li className="text-slate-500 text-[11px] font-bold uppercase tracking-wider leading-relaxed">
+                <span className="text-slate-300 block mb-1">Central:</span>
+                950 267 871 / 934 581 856
+              </li>
             </ul>
           </div>
 
@@ -50,10 +56,12 @@ const Footer = () => {
           <div className="lg:pl-8">
             <h4 className="text-[10px] font-black text-slate-200 mb-8 uppercase tracking-[0.3em]">Síguenos</h4>
             <div className="flex flex-wrap gap-3">
-              {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
+              {[Facebook, Instagram, Linkedin, WhatsAppIcon].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={i === 3 ? "https://wa.me/51950267871" : "#"}
+                  target={i === 3 ? "_blank" : undefined}
+                  rel={i === 3 ? "noopener noreferrer" : undefined}
                   className="w-11 h-11 rounded-xl flex items-center justify-center bg-slate-900 border border-slate-800 text-slate-500 hover:text-white hover:border-orange-600 hover:bg-orange-600 transition-all duration-300 group"
                 >
                   <Icon className="w-4 h-4 transition-transform group-hover:scale-110" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Zap, MessageCircle } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 
 const Hero = () => {
   return (
@@ -55,13 +56,13 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
             <a 
-              href="https://wa.me/51900000000?text=Hola%20ENGISER,%20me%20gustaría%20solicitar%20una%20asesoría%20sobre%20sus%20servicios." 
+              href="https://wa.me/51950267871?text=Hola%20ENGISER,%20me%20gustaría%20solicitar%20una%20asesoría%20sobre%20sus%20servicios." 
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary flex items-center justify-center gap-3 group px-8 py-4 text-[12px] uppercase tracking-widest shadow-xl shadow-orange-600/20"
             >
               Asesoría por WhatsApp
-              <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+              <WhatsAppIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             </a>
             <a 
               href="/equipos" 
