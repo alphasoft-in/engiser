@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Flame, HardHat, Leaf, Settings, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Flame, HardHat, Leaf, Settings, CheckCircle2, ChevronRight, GraduationCap, Droplets } from 'lucide-react';
+import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 
 const Services = () => {
   const services = [
@@ -8,25 +9,43 @@ const Services = () => {
       icon: Flame,
       title: 'Ingeniería Contra Incendios',
       description: 'Diseño e implementación de sistemas avanzados de detección y extinción bajo normas internacionales NFPA.',
-      features: ['Sistemas de Rociadores', 'Redes de Hidrantes', 'Bombas contra incendio']
+      features: ['Sistemas de Rociadores', 'Redes de Hidrantes', 'Bombas contra incendio'],
+      link: '/servicios/redes-incendios'
     },
     {
       icon: HardHat,
       title: 'Consultoría de Seguridad',
       description: 'Asesoría integral en seguridad y salud ocupacional para garantizar entornos de trabajo libres de riesgos.',
-      features: ['Auditorías de Seguridad', 'Planes de Contingencia', 'Mapas de Riesgos']
+      features: ['Auditorías de Seguridad', 'Planes de Contingencia', 'Mapas de Riesgos'],
+      link: '/servicios/seguridad-salud'
     },
     {
       icon: Leaf,
       title: 'Medio Ambiente',
       description: 'Evaluación y control de impactos ambientales para una operación sostenible y cumplimiento normativo.',
-      features: ['Monitoreo Ambiental', 'Gestión de Residuos', 'Estudios de Impacto']
+      features: ['Monitoreo Ambiental', 'Gestión de Residuos', 'Estudios de Impacto'],
+      link: '/servicios/gestion-ambiental'
     },
     {
       icon: Settings,
       title: 'Mantenimiento General',
       description: 'Servicio preventivo y correctivo especializado para garantizar la operatividad de sus equipos de seguridad.',
-      features: ['Mantenimiento de Sistemas', 'Recarga de Extintores', 'Pruebas Hidrostáticas']
+      features: ['Mantenimiento de Sistemas', 'Recarga de Extintores', 'Pruebas Hidrostáticas'],
+      link: '/servicios/servicios-generales'
+    },
+    {
+      icon: GraduationCap,
+      title: 'Capacitaciones',
+      description: 'Capacitamos a tus colaboradores de acuerdo a tus necesidades, buscando la mejora continua.',
+      features: ['Primeros Auxilios', 'Lucha Contra Incendios', 'Seguridad Industrial'],
+      link: '/servicios/capacitaciones-seguridad-industrial'
+    },
+    {
+      icon: Droplets,
+      title: 'Saneamiento Ambiental',
+      description: 'Eliminamos y erradicamos todo tipo de plaga, logrando un entorno limpio y saludable.',
+      features: ['Control de Plagas', 'Desinfección Ambientes', 'Limpieza de Tanques'],
+      link: '/servicios/saneamiento-ambiental'
     }
   ];
 
@@ -39,7 +58,7 @@ const Services = () => {
             <h2 className="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Nuestras Soluciones</h2>
             <div className="w-10 h-[2px] bg-orange-600"></div>
           </div>
-          <h3 className="text-4xl md:text-6xl font-black font-outfit text-slate-900 tracking-tight leading-none mb-8 overflow-visible">
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-black font-outfit text-slate-900 tracking-tight leading-none mb-8 overflow-visible">
             Ingeniería de{' '}
             <span className="text-gradient italic inline-block pr-6 overflow-visible">Alto Nivel</span>
           </h3>
@@ -56,7 +75,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500"
+              className="group p-6 sm:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500"
             >
               <div className="flex flex-col h-full">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-100 mb-8 group-hover:scale-110 group-hover:border-orange-200 transition-all duration-500">
@@ -80,10 +99,25 @@ const Services = () => {
                   ))}
                 </div>
 
-                <button className="flex items-center gap-2 text-[11px] font-black text-orange-600 uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform">
-                  Saber más
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-auto">
+                  <a 
+                    href={service.link}
+                    className="flex items-center gap-2 text-[10px] font-black text-slate-400 hover:text-orange-600 uppercase tracking-[0.2em] transition-colors group/link"
+                  >
+                    Saber más
+                    <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                  
+                  <a 
+                    href={`https://wa.me/51950267871?text=Hola%20ENGISER,%20me%20gustaría%20consultar%20sobre%20el%20servicio%20de%20${encodeURIComponent(service.title)}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 w-full sm:w-auto bg-orange-600 text-white px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-orange-700 transition-all duration-300 shadow-lg shadow-orange-600/20 hover:shadow-orange-600/40"
+                  >
+                    Consultar ahora
+                    <WhatsAppIcon className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}

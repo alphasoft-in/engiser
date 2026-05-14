@@ -3,14 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Products from '../components/sections/Products';
+import Clients from '../components/sections/Clients';
 import Footer from '../components/Footer';
 ---
 
-<Layout title="Catálogo de Equipos - ENGISER">
+<Layout 
+	title="Catálogo de Equipos de Rescate y Seguridad"
+	description="Venta de equipos de rescate, instrumentos de medición, equipos médicos de primeros auxilios e implementos de protección personal de las mejores marcas."
+>
 	<Navigation client:load />
 	<main class="bg-white min-h-screen">
     <PageHeader title="Nuestros Equipos" currentPage="Equipos" client:load />
 		<Products client:load isHomePage={false} />
+		<Clients client:visible />
 	</main>
 	<Footer />
 </Layout>

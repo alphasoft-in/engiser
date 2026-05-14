@@ -21,6 +21,7 @@
     "lucide-react": "^0.400.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0"
   }
 }

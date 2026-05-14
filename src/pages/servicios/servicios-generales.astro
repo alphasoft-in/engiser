@@ -8,27 +8,27 @@ import { Building2, Home } from 'lucide-react';
 const generalServices = [
   { 
     name: 'DRYWALL', 
-    image: '/images/generales/drywall.png' 
+    image: '/images/generales/drywall.avif' 
   },
   { 
     name: 'CARPINTERÍA METÁLICA', 
-    image: '/images/generales/metalica.png' 
+    image: '/images/generales/metalica.avif' 
   },
   { 
     name: 'ELECTRICIDAD', 
-    image: '/images/generales/electricidad.png' 
+    image: '/images/generales/electricidad.avif' 
   },
   { 
     name: 'CARPINTERÍA MELAMINE', 
-    image: '/images/generales/melamine.png' 
+    image: '/images/generales/melamine.avif' 
   },
   { 
     name: 'PINTURA Y ACABADOS', 
-    image: '/images/generales/pintura.png' 
+    image: '/images/generales/pintura.avif' 
   },
   { 
     name: 'MANTENIMIENTO GENERAL', 
-    image: '/images/generales/mantenimiento.png' 
+    image: '/images/generales/mantenimiento.avif' 
   },
 ];
 
@@ -40,44 +40,47 @@ const specialLines = [
 ];
 ---
 
-<Layout title="Servicios Generales - ENGISER">
+<Layout 
+	title="Mantenimiento Industrial y Servicios Generales"
+	description="Servicios integrales de mantenimiento preventivo y correctivo, recarga de extintores y soluciones de ingeniería para garantizar la operatividad de su empresa."
+>
 	<Navigation client:load />
 	
 	<main class="bg-white min-h-screen">
     <PageHeader title="Servicios Generales" currentPage="Generales" client:load />
 
-		<section class="py-24 overflow-hidden">
-			<div class="max-w-7xl mx-auto px-6 md:px-12">
+		<section class="pt-12 md:pt-10 pb-12 md:pb-10 overflow-hidden">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-12">
 				{/* Header Section */}
-				<div class="max-w-4xl mx-auto text-center mb-20 flex flex-col items-center">
+				<div class="max-w-4xl mx-auto text-center mb-10 md:mb-12 flex flex-col items-center">
 					<div class="flex items-center gap-3 mb-6">
 						<div class="w-10 h-[2px] bg-orange-600"></div>
 						<h2 class="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Infraestructura y Acabados</h2>
 						<div class="w-10 h-[2px] bg-orange-600"></div>
 					</div>
 
-					<h1 class="text-2xl md:text-4xl font-black font-outfit mb-8 leading-tight text-slate-900 tracking-tight uppercase">
+					<h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold font-outfit mb-6 leading-[1.1] text-slate-900 tracking-tight">
 						Soluciones en <br />
-						<span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">Servicios Generales</span>
+						<span class="text-gradient">Servicios Generales</span>
 					</h1>
 
-					<p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+					<p class="text-slate-500 text-sm sm:text-base lg:text-lg leading-relaxed font-medium max-w-2xl mx-auto">
 						Somos una empresa dedicada al rubro de servicios generales para industrias, minas, oficinas y hogares. Contamos con personal altamente calificado.
 					</p>
 				</div>
 
 				{/* Generales Grid - PREMIUM CIRCLE FORMAT */}
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative justify-items-center mb-32">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-10 lg:gap-y-16 gap-x-6 lg:gap-x-12 relative justify-items-center mb-6 md:mb-10">
 					{generalServices.map((service) => (
 						<div class="flex flex-col items-center group w-full max-w-[280px]">
-							<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden">
+							<div class="relative w-40 h-40 sm:w-48 md:w-44 lg:w-56 sm:h-48 md:h-44 lg:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden">
 								<img 
                   src={service.image} 
                   alt={service.name}
                   class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500"
                 />
 							</div>
-							<div class="mt-8 text-slate-900 text-[11px] md:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
+							<div class="mt-4 sm:mt-8 text-slate-900 text-[10px] md:text-[11px] lg:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
 								{service.name}
                 <div class="w-0 h-0.5 bg-orange-600 mx-auto mt-2 group-hover:w-12 transition-all duration-500"></div>
 							</div>
@@ -88,34 +91,34 @@ const specialLines = [
 				</div>
 
 				{/* Complementary Services Section */}
-				<div class="bg-slate-950 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
-          <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')] opacity-10"></div>
+				<div class="bg-slate-950 rounded-[2rem] px-6 py-10 md:px-8 md:py-12 lg:p-16 relative overflow-hidden shadow-2xl">
+          <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.avif')] opacity-10"></div>
           
-          <div class="relative z-10 flex flex-col lg:flex-row items-center gap-16">
+          <div class="relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
             <div class="flex-1">
-              <h3 class="text-white text-3xl font-black uppercase tracking-widest mb-8 leading-tight">
+               <h3 class="text-white text-lg md:text-xl lg:text-3xl font-extrabold font-outfit mb-4 md:mb-6 leading-[1.1] tracking-tight">
                 Calidad <br />
                 <span class="text-orange-600">& Experiencia</span>
               </h3>
-              <p class="text-slate-400 font-medium mb-10 text-sm leading-relaxed max-w-md">
+               <p class="text-slate-400 font-medium mb-6 text-[13px] md:text-[12px] lg:text-[13px] leading-relaxed max-w-md">
                 Nuestro objetivo es ofrecer el mejor servicio a nuestros clientes, poniendo a su disposición todo lo necesario para realizar proyectos de remodelación.
               </p>
-              <div class="flex gap-4">
-                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
+               <div class="flex flex-col sm:flex-row gap-3 w-full">
+                <div class="flex-1 flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
                   <Building2 className="text-orange-600 w-4 h-4" />
-                  <span class="text-white text-[10px] font-black uppercase tracking-widest">Industrias</span>
+                  <span class="text-white text-[10px] font-semibold uppercase tracking-widest">Industrias</span>
                 </div>
-                <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
+                <div class="flex-1 flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
                   <Home className="text-orange-600 w-4 h-4" />
-                  <span class="text-white text-[10px] font-black uppercase tracking-widest">Hogares</span>
+                  <span class="text-white text-[10px] font-semibold uppercase tracking-widest">Hogares</span>
                 </div>
               </div>
             </div>
             
-            <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
               {specialLines.map((line) => (
-                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl group hover:border-orange-600 transition-all text-center lg:text-left">
-                  <span class="text-white font-black text-[10px] uppercase tracking-[0.2em] leading-snug">{line}</span>
+                <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl group hover:border-orange-600 transition-all text-center lg:text-left">
+                   <span class="text-white font-semibold text-[8px] md:text-[8.5px] lg:text-[9px] uppercase tracking-widest leading-tight">{line}</span>
                 </div>
               ))}
             </div>

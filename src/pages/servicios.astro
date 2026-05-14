@@ -3,14 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation';
 import PageHeader from '../components/PageHeader';
 import Services from '../components/sections/Services';
+import Clients from '../components/sections/Clients';
 import Footer from '../components/Footer';
 ---
 
-<Layout title="Servicios de Ingeniería | ENGI SER">
+<Layout 
+	title="Nuestros Servicios de Ingeniería y Consultoría"
+	description="Descubra nuestras soluciones integrales en redes contra incendios, seguridad electrónica, saneamiento ambiental y capacitaciones especializadas para empresas."
+>
 	<Navigation client:load />
 	<main>
 		<PageHeader client:load title="Soluciones Técnicas" currentPage="Servicios" />
 		<Services client:load />
+		<Clients client:visible />
 	</main>
 	<Footer />
 </Layout>

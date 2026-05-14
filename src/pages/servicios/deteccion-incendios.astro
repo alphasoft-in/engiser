@@ -8,27 +8,27 @@ import { Eye } from 'lucide-react';
 const mainFeatures = [
   { 
     name: 'DISEÑO E INSTALACIÓN', 
-    image: '/images/deteccion/sensor.png' 
+    image: '/images/deteccion/sensor.avif' 
   },
   { 
     name: 'PROYECTOS INTEGRALES', 
-    image: '/images/deteccion/diseño.png' 
+    image: '/images/deteccion/diseño.avif' 
   },
   { 
     name: 'MANTENIMIENTO PREVENTIVO', 
-    image: '/images/deteccion/preventivo.png' 
+    image: '/images/deteccion/preventivo.avif' 
   },
   { 
     name: 'MANTENIMIENTO CORRECTIVO', 
-    image: '/images/deteccion/correctivo.png' 
+    image: '/images/deteccion/correctivo.avif' 
   },
   { 
     name: 'CERTIFICACIÓN INDECI', 
-    image: '/images/deteccion/certificacion.png' 
+    image: '/images/deteccion/certificacion.avif' 
   },
   { 
     name: 'GARANTÍA Y SOPORTE', 
-    image: '/images/deteccion/soporte.png' 
+    image: '/images/deteccion/soporte.avif' 
   },
 ];
 
@@ -40,44 +40,47 @@ const sensorTypes = [
 ];
 ---
 
-<Layout title="Sistemas de Detección de Incendios - ENGISER">
+<Layout 
+	title="Sistemas de Detección y Alarmas Contra Incendio"
+	description="Detección temprana de incendios mediante paneles inteligentes, sensores de humo, calor y sistemas de notificación estroboscópica de última tecnología."
+>
 	<Navigation client:load />
 	
 	<main class="bg-white min-h-screen">
     <PageHeader title="Detección Incendios" currentPage="Detección" client:load />
 
-		<section class="py-24 overflow-hidden">
-			<div class="max-w-7xl mx-auto px-6 md:px-12">
+		<section class="pt-12 md:pt-10 pb-12 md:pb-10 overflow-hidden">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-12">
 				{/* Header Section */}
-				<div class="max-w-4xl mx-auto text-center mb-20 flex flex-col items-center">
+				<div class="max-w-4xl mx-auto text-center mb-10 md:mb-12 flex flex-col items-center">
 					<div class="flex items-center gap-3 mb-6">
 						<div class="w-10 h-[2px] bg-orange-600"></div>
 						<h2 class="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Seguridad Electrónica</h2>
 						<div class="w-10 h-[2px] bg-orange-600"></div>
 					</div>
 
-					<h1 class="text-2xl md:text-4xl font-black font-outfit mb-8 leading-tight text-slate-900 tracking-tight uppercase">
+					<h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold font-outfit mb-6 leading-[1.1] text-slate-900 tracking-tight">
 						Sistema de <br />
-						<span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">Detección de Incendios</span>
+						<span class="text-gradient">Detección de Incendios</span>
 					</h1>
 
-					<p class="text-slate-500 text-sm md:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+					<p class="text-slate-500 text-sm sm:text-base lg:text-lg leading-relaxed font-medium max-w-2xl mx-auto">
 						Nuestro equipo desarrolla e instala sistemas de detección y extinción automática, apegándose a la normativa nacional e internacional para proteger sus activos.
 					</p>
 				</div>
 
 				{/* Detección Grid - PREMIUM CIRCLE FORMAT */}
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative justify-items-center mb-32">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-10 lg:gap-y-16 gap-x-6 lg:gap-x-12 relative justify-items-center mb-6 md:mb-10">
 					{mainFeatures.map((service) => (
 						<div class="flex flex-col items-center group w-full max-w-[280px]">
-							<div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden">
+							<div class="relative w-40 h-40 sm:w-48 md:w-44 lg:w-56 sm:h-48 md:h-44 lg:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 flex items-center justify-center overflow-hidden">
 								<img 
                   src={service.image} 
                   alt={service.name}
                   class="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500"
                 />
 							</div>
-							<div class="mt-8 text-slate-900 text-[11px] md:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
+							<div class="mt-4 sm:mt-8 text-slate-900 text-[11px] md:text-[12px] font-semibold tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
 								{service.name}
                 <div class="w-0 h-0.5 bg-orange-600 mx-auto mt-2 group-hover:w-12 transition-all duration-500"></div>
 							</div>
@@ -88,32 +91,32 @@ const sensorTypes = [
 				</div>
 
 				{/* Supply and Installation Section */}
-				<div class="bg-slate-950 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
-          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+				<div class="bg-slate-950 rounded-[2rem] px-6 py-10 md:px-8 md:py-12 lg:p-16 relative overflow-hidden shadow-2xl">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.avif')] opacity-10"></div>
           
-          <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+          <div class="relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
             <div>
-              <h3 class="text-white text-3xl font-black uppercase tracking-widest mb-8 leading-tight">
+              <h3 class="text-white text-lg md:text-xl lg:text-3xl font-extrabold font-outfit mb-4 md:mb-6 leading-[1.1] tracking-tight">
                 Suministros <br />
                 <span class="text-orange-600">& Tecnología</span>
               </h3>
-              <p class="text-slate-400 font-medium mb-8 text-sm">
+              <p class="text-slate-400 font-medium mb-6 text-[13px] md:text-[12px] lg:text-[13px] leading-relaxed max-w-md">
                 Instalamos sensores de última generación para todo tipo de infraestructuras: centros comerciales, industrias, universidades y edificios residenciales.
               </p>
               <div class="flex items-center gap-4 text-white font-black text-[10px] uppercase tracking-widest">
-                <div class="w-12 h-1 bg-orange-600"></div>
+                <div class="w-10 h-[2px] bg-orange-600"></div>
                 Cumplimiento Normativo Vigente
               </div>
             </div>
             
-            <div class="grid gap-6">
+            <div class="grid gap-2">
               {sensorTypes.map((sensor) => (
-                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-orange-600/50 transition-colors group">
+                <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl hover:border-orange-600/50 transition-colors group">
                   <div class="flex items-center gap-4 mb-2">
                     <Eye className="text-orange-600 w-5 h-5" />
-                    <h4 class="text-white font-black text-[12px] uppercase tracking-wider">{sensor.name}</h4>
+                    <h4 class="text-white font-semibold text-[9px] md:text-[9.5px] lg:text-[10px] uppercase tracking-wider">{sensor.name}</h4>
                   </div>
-                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wide pl-9 leading-relaxed">
+                  <p class="text-slate-500 text-[8px] md:text-[8.5px] lg:text-[9px] font-bold uppercase tracking-wide pl-9 leading-relaxed">
                     {sensor.desc}
                   </p>
                 </div>

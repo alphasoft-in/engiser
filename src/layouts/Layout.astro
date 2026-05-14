@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 interface Props {
 	title: string;
@@ -13,7 +14,6 @@ const { title, description = "ENGISER - Consultoría, ingeniería contra incendi
 <html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,11 +22,27 @@ const { title, description = "ENGISER - Consultoría, ingeniería contra incendi
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- SEO Tags -->
-		<title>{title} | ENGISER</title>
-		<meta name="keywords" content="ingeniería contra incendios, rescate, consultoría, seguridad industrial, medio ambiente, equipos de rescate" />
+		<title>{title} | ENGISER - Ingeniería y Seguridad</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="ingeniería contra incendios, seguridad industrial, salud ocupacional, equipos de rescate, saneamiento ambiental, perú, engiser" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={Astro.url} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
 		<meta property="og:title" content={`${title} | ENGISER`} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
+		<meta property="og:image" content={new URL('/images/hero.avif', Astro.url)} />
+		<meta property="og:locale" content="es_PE" />
+		<meta property="og:site_name" content="ENGISER" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={`${title} | ENGISER`} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL('/images/hero.avif', Astro.url)} />
 		
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,5 +60,6 @@ const { title, description = "ENGISER - Consultoría, ingeniería contra incendi
 	</head>
 	<body class="bg-[#020205] text-white overflow-x-hidden">
 		<slot />
+		<WhatsAppButton client:load />
 	</body>
 </html>

@@ -9,11 +9,11 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, currentPage }) => {
   return (
-    <section className="relative h-[40vh] min-h-[350px] flex items-center overflow-hidden bg-slate-900">
+    <section className="relative h-[25vh] sm:h-[30vh] md:h-[25vh] lg:h-[40vh] min-h-[180px] sm:min-h-[250px] md:min-h-[200px] lg:min-h-[350px] flex items-center overflow-hidden bg-slate-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/header-bg.png"
+          src="/images/header-bg.avif"
           alt="Engineering Background"
           className="w-full h-full object-cover opacity-40 scale-105"
         />
@@ -28,7 +28,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, currentPage }) => {
           className="flex flex-col items-center"
         >
           {/* Title */}
-          <h1 className="text-3xl md:text-5xl font-black font-outfit text-white tracking-normal italic leading-normal overflow-visible">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-outfit text-white tracking-normal italic leading-normal overflow-visible">
             {title.split(' ').map((word, i) => (
               <span 
                 key={i} 
@@ -40,7 +40,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, currentPage }) => {
           </h1>
           
           {/* Accent Line */}
-          <div className="w-16 h-1 bg-orange-600 mt-8 rounded-full shadow-lg shadow-orange-600/50 mx-auto" />
+          <div className="w-16 h-1 bg-orange-600 mt-4 sm:mt-8 rounded-full shadow-lg shadow-orange-600/50 mx-auto" />
         </motion.div>
       </div>
 

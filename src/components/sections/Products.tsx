@@ -8,26 +8,26 @@ interface ProductsProps {
 
 export default function Products({ isHomePage = false }: ProductsProps) {
   const allCategories = [
-    { name: 'ACCESORIOS TÉCNICOS', img: '/images/cat_accesorios.png' },
-    { name: 'BOMBAS PORTÁTILES', img: '/images/cat_bombas.png' },
-    { name: 'SISTEMAS DE ALARMA CONTRA INCENDIOS', img: '/images/cat_detectores.png' },
-    { name: 'EQUIPAMIENTO PARA RESCATE', img: '/images/cat_rescate.png' },
-    { name: 'PROTECCIÓN RESPIRATORIA', img: '/images/cat_respiratoria.png' },
-    { name: 'PROTECCIÓN PERSONAL', img: '/images/cat_personal.png' },
-    { name: 'EXTINCIÓN DE INCENDIOS', img: '/images/cat_extincion.png' },
-    { name: 'HERRAMIENTAS DE RESCATE', img: '/images/cat_herramientas.png' },
-    { name: 'VENTILADORES ESPECIALES', img: '/images/cat_ventiladores.png' },
-    { name: 'OTROS EN GENERAL', img: '/images/cat_otros.png' },
+    { name: 'ACCESORIOS TÉCNICOS', img: '/images/cat_accesorios.avif' },
+    { name: 'BOMBAS PORTÁTILES', img: '/images/cat_bombas.avif' },
+    { name: 'SISTEMAS DE ALARMA CONTRA INCENDIOS', img: '/images/cat_detectores.avif' },
+    { name: 'EQUIPAMIENTO PARA RESCATE', img: '/images/cat_rescate.avif' },
+    { name: 'PROTECCIÓN RESPIRATORIA', img: '/images/cat_respiratoria.avif' },
+    { name: 'PROTECCIÓN PERSONAL', img: '/images/cat_personal.avif' },
+    { name: 'EXTINCIÓN DE INCENDIOS', img: '/images/cat_extincion.avif' },
+    { name: 'HERRAMIENTAS DE RESCATE', img: '/images/cat_herramientas.avif' },
+    { name: 'VENTILADORES ESPECIALES', img: '/images/cat_ventiladores.avif' },
+    { name: 'OTROS EN GENERAL', img: '/images/cat_otros.avif' },
   ];
 
   // Show only 3 on home page, all 10 on the catalog page
   const highlights = isHomePage ? allCategories.slice(0, 3) : allCategories;
 
   return (
-    <section id="equipos" className="bg-slate-50 py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="equipos" className="bg-white pt-12 md:pt-10 pb-12 md:pb-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Header Section */}
-        <div className="max-w-4xl mx-auto mb-20 text-center flex flex-col items-center">
+        <div className="max-w-4xl mx-auto mb-10 md:mb-12 text-center flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
             className="flex items-center gap-3 mb-6"
           >
             <div className="w-10 h-[2px] bg-orange-600"></div>
-            <h2 className="text-[11px] font-black text-orange-600 uppercase tracking-[0.3em]">Suministros e Insumos</h2>
+            <h2 className="text-[11px] font-semibold text-orange-600 uppercase tracking-[0.3em]">Suministros e Insumos</h2>
             <div className="w-10 h-[2px] bg-orange-600"></div>
           </motion.div>
 
@@ -44,7 +44,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl md:text-4xl font-black font-outfit mb-6 leading-[1.1] text-slate-900 tracking-tight uppercase"
+            className="text-xl md:text-3xl font-extrabold font-outfit mb-6 leading-[1.1] text-slate-900 tracking-tight"
           >
             Venta de Equipos de <br />
             <span className="text-gradient">Rescate y Contra Incendios</span>
@@ -62,7 +62,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 relative justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-10 lg:gap-y-16 gap-x-6 lg:gap-x-12 relative justify-items-center">
           {highlights.map((h, i) => (
             <motion.div
               key={h.name}
@@ -72,7 +72,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
               transition={{ delay: i * 0.1 }}
               className="flex flex-col items-center group w-full max-w-[280px]"
             >
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 overflow-hidden">
+              <div className="relative w-40 h-40 sm:w-48 md:w-44 lg:w-56 sm:h-48 md:h-44 lg:h-56 rounded-full border-4 border-orange-600 p-2 bg-white shadow-2xl group-hover:rotate-6 transition-transform duration-500 overflow-hidden">
                 <img 
                   src={h.img} 
                   alt={h.name} 
@@ -80,7 +80,7 @@ export default function Products({ isHomePage = false }: ProductsProps) {
                   style={{ maskImage: 'radial-gradient(circle, black 50%, transparent 95%)', WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)' }}
                 />
               </div>
-              <div className="mt-8 text-slate-900 text-[11px] md:text-[12px] font-black tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
+              <div className="mt-4 sm:mt-8 text-slate-900 text-[11px] md:text-[12px] font-semibold tracking-[0.25em] text-center uppercase group-hover:text-orange-600 transition-colors duration-300">
                 {h.name}
                 <div className="w-0 h-0.5 bg-orange-600 mx-auto mt-2 group-hover:w-12 transition-all duration-500"></div>
               </div>
@@ -96,11 +96,11 @@ export default function Products({ isHomePage = false }: ProductsProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-20 flex justify-center"
+            className="mt-12 flex justify-center"
           >
             <a 
               href="/equipos" 
-              className="group flex items-center gap-4 bg-slate-950 text-white px-12 py-5 rounded-full text-[12px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-slate-900/20 hover:bg-orange-600 transition-all duration-300"
+              className="inline-flex items-center gap-3 bg-slate-950 text-white px-8 py-3.5 rounded-full font-bold text-[11px] uppercase tracking-[0.15em] hover:bg-orange-600 transition-all duration-300 group shadow-xl shadow-slate-950/20"
             >
               Ver Catálogo Completo
               <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />

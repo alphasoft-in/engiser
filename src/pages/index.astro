@@ -5,16 +5,21 @@ import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Products from '../components/sections/Products';
 import Contact from '../components/sections/Contact';
+import Clients from '../components/sections/Clients';
 import Footer from '../components/Footer';
 ---
 
-<Layout title="Ingeniería y Servicios de Seguridad">
+<Layout 
+	title="Líderes en Ingeniería Contra Incendios y Seguridad"
+	description="ENGISER es su socio estratégico en ingeniería contra incendios, consultoría de seguridad, salud ocupacional y venta de equipos de rescate con cobertura en todo el Perú."
+>
 	<Navigation client:load />
 	<main>
 		<Hero client:load />
 		<About client:visible showFull={false} />
 		<Products client:visible isHomePage={true} />
 		<Contact client:visible />
+		<Clients client:visible />
 	</main>
 	<Footer />
 </Layout>
